@@ -1,0 +1,32 @@
+{% extends 'Administrador/base.html'%}
+{% block title%}Revisar{% endblock%}
+{% block content %}
+
+
+  <div class="row p-1 border rounded align-items-center">
+    <div class="col-12"><h1>Detalles:</h1></div>
+    <div class="col-lg-12 float-left align-items-center" style="display: flex;align-items: center;">
+    <h5 class="p-1 float-left">Proyecto:</h5><p style="padding: 10px;">{{object.ProjectName}}</p>
+    </div>
+    <div class="col-12">
+    <h5 class="align-self-center p-1 float-left">Equipo:</h5><p class="" <p style="padding: 10px;">{{project.Teamforproject}}</p>
+    </div>
+    <div class="col-12">
+    <h5 class="align-self-center p-1 float-left">Usuario:</h5><p class="" <p style="padding: 10px;">{{project.Id_Manager}}</p>
+    </div>
+ <div class="col-12">
+    <h5 class="align-self-center p-1 float-left">Date:</h5><p class="" <p style="padding: 10px;">{{project.DeadLine}}</p>
+    </div>
+    <h5>Notas:</h5>
+    <p>{{project.about}}</p>
+    <div class="col-lg-12"><a href="{% url 'Administrador:ActualizarProyectos' object.id_Project %}"><button type="button" class="btn btn-success ml-20">Actualizar</button></a>
+<a href="{% url 'Administrador:BorrarProyectos' object.id_Project %}"><button type="button" class="btn btn-danger ml-20">Eliminar</button></a>
+<a href="{% url 'Administrador:TareasDeProyecto' object.id_Project %}"><button type="button" class="btn btn-warning ml-20">Ver Tareas</button></a>
+    </div>
+
+    
+  </div>
+
+
+  
+{% endblock %}

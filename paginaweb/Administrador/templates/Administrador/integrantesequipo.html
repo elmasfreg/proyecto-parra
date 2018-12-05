@@ -1,0 +1,27 @@
+{% extends 'Administrador/base.html'%}
+
+{% block title %}Home{% endblock%}
+{% block content %}
+{% for objeto in object_list%}
+
+
+{{objeto.idDev}}
+  <div class="row p-1 border rounded">
+    <h5 class="align-self-center p-1">Equipo:</h5>
+    <div style="float: none;"  class="col-lg-12">
+<a href=""><button type="button" class="btn btn-success ml-20">Ver Integrantes</button></a>
+    </div>
+  </div>
+
+
+
+
+
+
+{% endfor %}
+
+  
+
+
+
+{% endblock%}

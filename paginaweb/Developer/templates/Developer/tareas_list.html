@@ -1,0 +1,45 @@
+{% extends 'Developer/baseuser.html'%}
+
+{% block title %}Home{% endblock%}
+{% block content %}
+
+
+{% for tar in task %}
+  <div class="row p-1 rounded">
+    <h1>{{tar.Name}}</h1>
+    <h5 class="align-self-center p-1">Proyecto:{{tar.id_Proj}}</h5>
+    <div style="float: none;"  class="col-lg-12">
+    <p style="">Descripcion:{{tar.about|safe}}</p>
+
+
+<a href="{% url 'Developer:Modificar' tar.id_Task %}"><button type="button" class="btn btn-success ml-20">Revisar</button></a>
+    </div>
+  </div>
+
+{% endfor %}
+
+
+
+
+
+
+
+{% endblock%}
+{% block tareas %}  
+
+<section class="col-lg-4 border-left">
+<div class="p-2">
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active">
+   Tareas Proximas
+  </a>
+{% for t in task %}
+<a href="#" class="list-group-item list-group-item-action">{{t.Name}}</a>
+{% endfor %}
+
+  
+</div>
+</div>
+
+  </section>
+  {% endblock%}

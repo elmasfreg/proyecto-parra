@@ -1,0 +1,38 @@
+{% extends 'Administrador/base.html'%}
+{% block title%}Proyectos{% endblock%}
+{% block content %}
+
+{% load static %}
+  <!--Aqui va el de proyectos-->
+  <div class="row p-2 border rounded">
+<center class="text-center"> <h1>Perfil</h1> </center> 
+  </div>
+<div class="row my-2 p-4 border rounded ">
+
+
+<style>.errorlist{color:red;} label{display:none}</style>
+<main role="main">
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-9 mx-auto mb-5">
+        <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+          <div class="row">
+            <!-- Formulario -->
+            <div class="col-md-10">
+              <h3>Cambiar Correo</h3>
+              {{ form.as_p }}
+              <input type="submit" class="btn btn-primary btn-block mt-3" value="Actualizar">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+</div> 
+
+<!--Aqui termina-->
+
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'Administrador/base.html'%}
+{% block title %}Tareas{% endblock%}
+{% block content %}
+
+
+  <div class="row p-2 border rounded">
+<center class="text-center"> <h1>Tareas</h1> </center> 
+  </div>
+<div class="row my-2 p-4 rounded ">
+
+
+<form action="" method="POST">
+{% csrf_token %}
+
+{{form.as_p}}
+
+<input type="submit" class="btn btn-success m-4" value="Agregar">
+</form>
+
+</div> 
+
+ 
+
+{% endblock %}
